@@ -55,3 +55,56 @@
 | **UGameOverWidget**         | ResultText<br>ScoreText<br>RestartButton, MainMenuButton                                                                                                    | `SetResult(bool)`<br>`BindRestart()`<br>`BindReturnToMenu()`                                                            |
 | **APrimaryHUD** *(HUD 클래스)* | -                                                                                                                                                           | `CreateMainMenu()`<br>`CreateHUD()`<br>`CreateGameOver()`<br>`ShowMainMenu()`<br>`ShowInGameUI()`<br>`ShowGameOverUI()` |
 | **AMainPlayerController**   | -                                                                                                                                                           | UI Input 모드 전환<br>`TogglePauseMenu()`<br>UI 위젯 표시 및 전환 제어                                                               |
+---
+
+```mermaid
+classDiagram
+  direction TB
+
+  class UUserWidget {
+    <<abstract>>
+  }
+
+  class UMainMenuWidget {
+    +OnStartClicked()
+    +OnHelpClicked()
+    +OnQuitClicked()
+  }
+
+  class UInGameHUDWidget {
+    +UpdateHP()
+    +UpdateXP()
+    +UpdateCooldown()
+    +SetBossHP()
+  }
+
+  class UGameOverWidget {
+    +SetResult()
+    +BindRestart()
+    +BindReturnToMenu()
+  }
+
+  class APrimaryHUD {
+    +CreateMainMenu()
+    +CreateHUD()
+    +CreateGameOver()
+    +ShowMainMenu()
+    +ShowInGameUI()
+    +ShowGameOverUI()
+  }
+
+  class AMainPlayerController {
+    +TogglePauseMenu()
+    +SwitchInputMode()
+  }
+
+  %% 상속 방향을 위쪽으로
+  UUserWidget <|-- UMainMenuWidget
+  UUserWidget <|-- UInGameHUDWidget
+  UUserWidget <|-- UGameOverWidget
+
+  %% 관계 방향을 위쪽으로
+  APrimaryHUD --> UUserWidget : manages
+  AMainPlayerController --> UUserWidget : controls
+
+```
