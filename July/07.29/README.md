@@ -46,3 +46,12 @@
 | 종료          | 게임 종료   |
 
 ---
+
+### ✅ 5 .클래스 설계 예시
+| 클래스 이름                      | 주요 구성 요소                                                                                                                                                    | 주요 함수 / 역할                                                                                                              |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **UMainMenuWidget**         | StartButton<br>HelpButton<br>QuitButton                                                                                                                     | `OnStartClicked()`<br>`OnHelpClicked()`<br>`OnQuitClicked()`                                                            |
+| **UInGameHUDWidget**        | StageText, EnemyCountText<br>BossHPBar<br>HPBar, HPText<br>XPBar, LevelText<br>WeaponNameText, WeaponDescText<br>WallJumpCooldownBar, DoubleJumpCooldownBar | `UpdateHUD()`<br>`UpdateCooldown(EAbilityType, float)`<br>`SetBossHP(float, float)`                                     |
+| **UGameOverWidget**         | ResultText<br>ScoreText<br>RestartButton, MainMenuButton                                                                                                    | `SetResult(bool)`<br>`BindRestart()`<br>`BindReturnToMenu()`                                                            |
+| **APrimaryHUD** *(HUD 클래스)* | -                                                                                                                                                           | `CreateMainMenu()`<br>`CreateHUD()`<br>`CreateGameOver()`<br>`ShowMainMenu()`<br>`ShowInGameUI()`<br>`ShowGameOverUI()` |
+| **AMainPlayerController**   | -                                                                                                                                                           | UI Input 모드 전환<br>`TogglePauseMenu()`<br>UI 위젯 표시 및 전환 제어                                                               |
