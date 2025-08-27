@@ -36,24 +36,24 @@
 
 ### A. 우리가 이해해야 하는 두 표
 
-![alt text](image.png)
+![alt text](ScreenShots/image.png)
 
 ### B. 용어 포인트 (Invoke / Ownership 라벨)
 
-![alt text](image-1.png)
+![alt text](ScreenShots/image-1.png)
 
-![alt text](image-2.png)
+![alt text](ScreenShots/image-2.png)
 
 ### C. UFUNCTION 키워드(서버/클라/멀티캐스트) 강조
 
-![alt text](image-3.png)
+![alt text](ScreenShots/image-3.png)
 ### D. 자주 쓰는 3가지 케이스
 
-![alt text](image-4.png)
+![alt text](ScreenShots/image-4.png)
 
-![alt text](image-5.png)
+![alt text](ScreenShots/image-5.png)
 
-![alt text](image-6.png)
+![alt text](ScreenShots/image-6.png)
 
 ---
 
