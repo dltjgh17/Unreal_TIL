@@ -12,6 +12,7 @@ flowchart LR
     A4 --> B1[Pull Request 생성\nbase = develop\ncompare = feature/...]
     B1 --> B2[리뷰 진행\nApprove 또는 수정 요청]
     B2 --> B3[Merge\ndevelop에 병합]
+    
     B3 --> B4[Issue 자동 Close\n작업 완료]
 ```
 
